@@ -1,0 +1,37 @@
+body{
+    background-image: url("https://i.pinimg.com/236x/31/d2/1a/31d21ab33fa7f6f26ad51a1cbf0f42bd--clip-art.jpg");
+    font-family: Arial;
+    background-size: auto 100vh;
+  }
+  
+  .menu{
+    background-color:white;
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li{
+    list-style: none;
+  }
+  
+  a{
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .site-subtittle,
+  .site-tittle{
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .site-subtittle{
+    font-style: italic;
+  }
