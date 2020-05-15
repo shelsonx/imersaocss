@@ -1,12 +1,47 @@
+/*reset do css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    background-image: url("https://i.pinimg.com/236x/31/d2/1a/31d21ab33fa7f6f26ad51a1cbf0f42bd--clip-art.jpg");
-    font-family: Arial;
-    background-size: auto 100vh;
+    background: linear-gradient(#B22222 50%,#000000);
+    font-family: 'Source Code Pro', monospace;
+    background-size: 100vw 100vh;
+    font-size: 12px;
+    color: whitesmoke;
   }
   
-  .menu{
-    background-color:white;
+/*Se a midia tiver pelo menos 400px vai carregar estes estilos*/
+  @media(min-width: 400px){
+    body{
+      font-size: 14px;
+    }
   }
+
+  @media(min-width: 600px){
+    body{
+      font-size: 18px;
+    }
+  }
+
+  header{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .menu{
+    background: linear-gradient( #000000,#B22222);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+  
   
   .menu ul{
     display: flex;
@@ -16,14 +51,36 @@ body{
   .menu li{
     list-style: none;
   }
-  
-  a{
-    color: teal;
+
+  .menu a{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8em;
+    padding: 15px 20px;
+    display: block;
+    color: whitesmoke;
     text-decoration: none;
+    transition: text-shadow 0.3s;
   }
   
-  a:hover{
-    text-decoration: underline;
+  .menu a:active, /*Para telas touch ao clicar*/
+  .menu a:hover{
+    text-shadow: 0 0 20px  gold;
+    color: whitesmoke;
+  }
+
+  .titulo{
+    animation: linear 2s animaTitulo forwards;
+  }
+
+  @keyframes animaTitulo{
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
   }
   
   .site-subtittle,
@@ -31,7 +88,119 @@ body{
     color: whitesmoke;
     text-align: center;
   }
+
+  .site-tittle{
+    font-size: 3em;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
   
   .site-subtittle{
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .sobre h2,
+  .contato h2,
+  .portifolio h2{
+    font-family: 'Source Code Pro', monospace;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 2em;
+  }
+  .sobre,
+  .contato,
+  .portifolio{
+    padding: 1em;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  .portifolio .grid{
+    display: grid;
+    gap: 1em;
+  }
+
+  @media (min-width: 560px){
+    .portifolio .grid{
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px){
+    .portifolio .grid{
+      grid-template-columns: repeat(3, 260px);
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
+  .portifolio figure{
+    text-align: center;
+    color: whitesmoke;
+  }
+ 
+  .img-portfolio{
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+
+  .img-portfolio:hover{
+    transform: scale(1.1);
+  }
+
+  .contato{
+    min-height: 50vh;
+    min-width: 100vw;
+    background: linear-gradient(#B22222 50%,#000000);
+  }
+
+  .contato a{
+    text-decoration: none;
+    font-size: 5em;
+    color: whitesmoke;
+    transition: text-shadow 0.5s;
+  }
+  .contato:active, /*Para telas touch ao clicar*/
+  .contato a:hover{
+    text-shadow: 0 0 8px rgba(252, 255, 255, 0.7);
+  }
+
+  .contato .icons{
+    text-align: center;
+  }
+
+  .sobre p{
+    text-align: justify;
+    text-indent: 40px;
+    margin-bottom: 8px;
+    
+  }
+
+  .sobre a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .sobre a:hover{
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+  .sobre img{
+    float: left;
+    margin-right: 20px;
+    border-radius: 30px;
+    width: 280px;
+    height: 290px;
+    box-shadow: 1px 1px 0 5px rgba(0,0,0,0.1);
+  }
+  .sobre img:active,
+  .sobre img:hover{
+    transform: rotateY(10deg);
   }
