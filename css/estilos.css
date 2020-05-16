@@ -113,7 +113,8 @@ body{
   .portifolio{
     padding: 1em;
     min-height: 100vh;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 850px;
   }
 
@@ -125,6 +126,17 @@ body{
   @media (min-width: 560px){
     .portifolio .grid{
       grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (max-width: 600px){
+    .sobre img{
+      max-width: 150px;
+      max-height: 170px;
+    }
+
+    .sobre p{
+      font-size: 0.5em;
     }
   }
 
@@ -174,10 +186,12 @@ body{
     text-align: center;
   }
 
+
   .sobre p{
     text-align: justify;
     text-indent: 40px;
     margin-bottom: 8px;
+    font-size: 1em;
     
   }
 
@@ -191,6 +205,7 @@ body{
     text-decoration: underline;
     font-style: italic;
   }
+
 
   .sobre img{
     float: left;
